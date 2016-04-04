@@ -99,6 +99,20 @@ abstract class Model
 
     }
 
+    public static function where($column, $value)
+    {
+        self::dbConnect();
+
+        $query = "SELECT * from static::$table where :column = :value";
+
+        $statement = self::$dbc->prepare($query);
+        $statement->bindValue(':column', $column, PDO::PARAM_STR);
+        $statement->execute();
+
+        $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $results;
+    }
+
     /**
      * Insert new entry into database
      *

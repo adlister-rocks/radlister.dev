@@ -10,6 +10,8 @@ $ad = [
     'image_url'   => '/img/uploads/100.png'
 ];
 
+
+
 ?>
 <!DOCTYPE html>
 <html>

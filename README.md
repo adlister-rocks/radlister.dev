@@ -60,6 +60,3 @@ Radlister is a full stack amazon/craigslist clone.
 
     bootstrap.php          // site initialization
 
-
-- do ansible scripts to create your .devs
-- do ansible scripts to create your dbs
